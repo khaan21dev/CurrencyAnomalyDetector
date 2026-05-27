@@ -14,8 +14,3 @@ variable "sql_admin_password" {
   description = "Azure SQL admin password"
   sensitive   = true
 }
-
-variable "logic_app_url" {
-  description = "Logic App HTTP trigger URL"
-  sensitive   = true
-}
