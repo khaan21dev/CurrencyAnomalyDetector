@@ -5,8 +5,12 @@ services:
     build: ./pipeline
     container_name: currency-pipeline
     environment:
-      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
+      - DB_SERVER=${DB_SERVER}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
       - LOGIC_APP_URL=${LOGIC_APP_URL}
+
     ports:
       - "8000:8000"
     restart: unless-stopped
