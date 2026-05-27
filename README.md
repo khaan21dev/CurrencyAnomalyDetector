@@ -1,6 +1,6 @@
 # Currency Trade Anomaly Detection Pipeline
 
-A real-time currency exchange rate monitoring and anomaly detection pipeline inspired by **MiFID II** and **Market Abuse Regulation (MAR)** requirements. The system fetches live PLN/EUR, PLN/USD, and PLN/GBP exchange rates every 10 minutes, applies statistical anomaly detection rules, stores all data in Azure SQL, and fires automated email alerts via Azure Logic Apps when suspicious movements are detected.
+A real-time currency exchange rate monitoring and anomaly detection pipeline inspired by MiFID II and Market Abuse Regulation (MAR) requirements. The system fetches live PLN/EUR, PLN/USD, and PLN/GBP exchange rates every 10 minutes, applies statistical anomaly detection rules, stores all data in Azure SQL, and fires automated email alerts via Azure Logic Apps when suspicious movements are detected. Built with Python, Docker, Terraform, Prometheus, and Grafana — fully containerised and deployable on Azure.
 
 ---
 
