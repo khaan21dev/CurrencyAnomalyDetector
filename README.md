@@ -149,4 +149,4 @@ When an anomaly is detected the pipeline sends an HTTP POST to Azure Logic Apps 
 
 ## Screenshots
 
-All screenshots will be added to folder named SCREENSHOTS
+All screenshots can be found at SCREENSHOTS folder
