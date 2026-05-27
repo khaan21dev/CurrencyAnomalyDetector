@@ -1,0 +1,7 @@
+flask
+flask-cors
+requests
+prometheus-client
+schedule
+python-dotenv
+pymssql
