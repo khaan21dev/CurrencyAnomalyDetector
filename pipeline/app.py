@@ -19,10 +19,10 @@ CURRENT_RATE = Gauge('current_rate', 'Current exchange rate', ['pair'])
 # Database connection
 def get_db_connection():
     return pymssql.connect(
-        server='sql-currency-anomaly.database.windows.net',
-        user='sqladmin',
-        password='KhanCloud2001!',
-        database='currency-rates-db',
+        server=os.getenv('DB_SERVER'),
+        user=os.getenv('DB_USER'),
+        password=os.getenv('DB_PASSWORD'),
+        database=os.getenv('DB_NAME'),
         tds_version='7.4'
     )
 
@@ -105,8 +105,8 @@ def get_previous_rate(pair):
         conn = get_db_connection()
         cursor = conn.cursor()
         cursor.execute(
-            'SELECT TOP 1 rate FROM rates WHERE pair = ? ORDER BY timestamp DESC',
-            pair
+            'SELECT TOP 1 rate FROM rates WHERE pair = %s ORDER BY timestamp DESC',
+            (pair,)
         )
         row = cursor.fetchone()
         conn.close()
